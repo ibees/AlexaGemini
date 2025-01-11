@@ -1,0 +1,76 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "question",
+              "type": "AMAZON.Language"
+            }
+          ],
+          "name": "ChatGPTIntent",
+          "samples": [
+            "{question}"
+          ]
+        },
+        {
+          "name": "ChangeLLMIntent",
+          "slots": [
+            {
+              "name": "llm_type",
+              "type": "LLM_TYPE"
+            }
+          ],
+          "samples": [
+            "{llm_type} に切り替えて",
+            "{llm_type} を使って",
+            "{llm_type} モードに変更して"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "LLM_TYPE",
+          "values": [
+            {
+              "name": {
+                "value": "クロード",
+                "synonyms": ["Claude", "クロウド"]
+              }
+            },
+            {
+              "name": {
+                "value": "チャットジーピーティー",
+                "synonyms": ["ChatGPT", "チャットGPT", "GPT"]
+              }
+            },
+            {
+              "name": {
+                "value": "ジェミニ",
+                "synonyms": ["Gemini", "ジェミナイ"]
+              }
+            }
+          ]
+        }
+      ],
+      "invocationName": "ジェミニ"
+    }
+  }
+}
