@@ -147,6 +147,7 @@ async function callClaudeAPI(prompt) {
         const response = await claude.messages.create({
             model: config.llm_configs.claude.model,
             system: config.llm_configs.claude.system_message,
+            max_tokens: 200,
             messages: [{ role: 'user', content: prompt }]
         });
         return response.content[0].text;
